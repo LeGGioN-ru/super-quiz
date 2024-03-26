@@ -1,28 +1,26 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class BounceAnimation : IScalebleStrategy
+public class BounceAnimation : AnimationTween
 {
     private Vector3 _startScale;
 
-    public void Scale(Transform transform, float duration, float delay = 0)
+    public BounceAnimation(Transform target) : base(target)
     {
-        Bounce(transform, duration, duration, duration, delay);
+        _startScale = target.localScale;
     }
 
-    public void Scale(Transform transform, float duration, float duration2, float duration3, float delay = 0)
+    public override Tween Play(float duration, float delay = 0)
     {
-        Bounce(transform, duration, duration2, duration3, delay);
+      return Bounce(Target, duration, delay);
     }
 
-    private void Bounce(Transform transform, float duration, float duration2, float duration3, float delay)
+    private Tween Bounce(Transform transform, float duration, float delay)
     {
-        transform.DOKill();
-        Sequence mySequence = DOTween.Sequence().SetDelay(delay);
-        _startScale = transform.localScale;
+        Sequence sequence = DOTween.Sequence().SetDelay(delay);
         transform.localScale = Vector3.zero;
-        mySequence.Append(transform.DOScale(_startScale + new Vector3(.3f, .3f, .3f), duration))
-                  .Append(transform.DOScale(_startScale - new Vector3(.2f, .2f, .2f), duration2))
-                  .Append(transform.DOScale(_startScale, duration3));
+        return sequence.Append(transform.DOScale(_startScale + new Vector3(.3f, .3f, .3f), duration))
+                    .Append(transform.DOScale(_startScale - new Vector3(.2f, .2f, .2f), duration))
+                    .Append(transform.DOScale(_startScale, duration));
     }
 }

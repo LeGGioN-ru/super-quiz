@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Levels Settings
   m_EditorClassIdentifier: 
   _levels:
+  - <Rows>k__BackingField: 1
+    <Columns>k__BackingField: 3
+  - <Rows>k__BackingField: 2
+    <Columns>k__BackingField: 3
   - <Rows>k__BackingField: 3
     <Columns>k__BackingField: 3
   <Space>k__BackingField: 1.7

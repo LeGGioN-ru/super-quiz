@@ -6,11 +6,13 @@ public class GridGenerator
 {
     private readonly Transform _centerPoint;
     private readonly CellPresenter _prefab;
+    private readonly IObjectResolver _container;
 
-    public GridGenerator(Transform centerPoint, CellPresenter prefab)
+    public GridGenerator(Transform centerPoint, CellPresenter prefab, IObjectResolver container)
     {
         _centerPoint = centerPoint;
         _prefab = prefab;
+        _container = container;
     }
 
     public List<CellPresenter> Generate(int columns, int rows, float space)
@@ -25,6 +27,10 @@ public class GridGenerator
                 Vector3 position = new Vector3(_centerPoint.position.x + j * space - offset.x, _centerPoint.position.y + i * space - offset.y, _centerPoint.position.z);
 
                 CellPresenter obj = GameObject.Instantiate(_prefab, position, Quaternion.identity);
+                _container.Inject(obj);
+
+                if (obj.TryGetComponent(out CellView view))
+                    _container.Inject(view);
 
                 list.Add(obj);
             }

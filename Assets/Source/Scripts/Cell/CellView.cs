@@ -3,16 +3,31 @@ using VContainer;
 
 public class CellView : MonoBehaviour
 {
-    private CellPresenter _cellPresenter;
+    [SerializeField] private CellPresenter _cellPresenter;
+
+    private LevelsSwitcher _levelsSwitcher;
+    private bool _canClicking = true;
 
     [Inject]
-    public void Construct(CellPresenter cellPresenter)
+    public void Construct(LevelsSwitcher levelsSwitcher)
     {
-        _cellPresenter = cellPresenter;
+        _levelsSwitcher = levelsSwitcher;
+        _levelsSwitcher.LevelsEnded += DisableClicking;
+    }
+
+    private void OnDisable()
+    {
+        _levelsSwitcher.LevelsEnded -= DisableClicking;
     }
 
     private void OnMouseDown()
     {
-        _cellPresenter.OnCellClick();
+        if (_canClicking)
+            _cellPresenter.OnCellClick();
+    }
+
+    private void DisableClicking()
+    {
+        _canClicking = false;
     }
 }
