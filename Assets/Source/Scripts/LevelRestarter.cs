@@ -43,15 +43,15 @@ public class LevelRestarter : MonoBehaviour
     {
         _buttonHandler.gameObject.SetActive(false);
 
-        float duraionFade = 1f;
+        float durationFade = 1f;
 
         Tween tween = null;
 
-        tween = _backgroundAnimation.Fade(duraionFade, 1, _background.color.a, 0);
+        tween = _backgroundAnimation.Fade(durationFade, 1, _background.color.a, 0);
         tween.OnComplete(() =>
         {
             GameRestarted?.Invoke();
-            Tween lastTween = _backgroundAnimation.Fade(duraionFade, 0, 1, 0);
+            Tween lastTween = _backgroundAnimation.Fade(durationFade, 0, 1, 0);
             lastTween.OnComplete(() => Disable());
         });
     }
