@@ -10,7 +10,6 @@ public class CellPresenter : MonoBehaviour
     private AnswerChecker _answerChecker;
     private AnimationTween _wrongAnswerAnimation;
     private AnimationTween _rightAnswerAnimation;
-    private LevelRestarter _levelRestarterPresenter;
     private bool _isParticlesSpawned;
 
     public CellData Settings { get; private set; }
