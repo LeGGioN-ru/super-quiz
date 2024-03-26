@@ -1,14 +1,17 @@
 using DG.Tweening;
 using UnityEngine;
 
-public abstract class AnimationTween
+namespace Animations
 {
-    protected Transform Target;
-
-    public AnimationTween(Transform target)
+    public abstract class AnimationTween
     {
-        Target = target;
-    }
+        protected Transform Target;
 
-    public abstract Tween Play(float duration, float delay = 0);
+        public AnimationTween(Transform target)
+        {
+            Target = target;
+        }
+
+        public abstract Tween Play(float duration, float delay = 0);
+    }
 }

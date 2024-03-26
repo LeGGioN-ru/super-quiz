@@ -1,30 +1,32 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class ShakeAnimation : AnimationTween
+namespace Animations
 {
-    private Vector3 _originalPosition;
-
-    public ShakeAnimation(Transform target) : base(target)
+    public class ShakeAnimation : AnimationTween
     {
-        _originalPosition = target.position;
-    }
+        private Vector3 _originalPosition;
 
-    public override Tween Play(float duration, float delay = 0)
-    {
-       return Shake(duration, delay);
-    }
+        public ShakeAnimation(Transform target) : base(target)
+        {
+            _originalPosition = target.position;
+        }
 
-    public Tween Shake(float duration, float delay)
-    {
-        Sequence mySequence = DOTween.Sequence().SetDelay(delay);
+        public override Tween Play(float duration, float delay = 0)
+        {
+            return Shake(duration, delay);
+        }
 
-        mySequence.Append(Target.DOMoveX(_originalPosition.x - 0.1f, duration).SetEase(Ease.InBounce));
-        mySequence.Append(Target.DOMoveX(_originalPosition.x + 0.1f, duration).SetEase(Ease.InBounce));
-        mySequence.Append(Target.DOMoveX(_originalPosition.x - 0.1f, duration).SetEase(Ease.InBounce));
-        mySequence.Append(Target.DOMoveX(_originalPosition.x, duration).SetEase(Ease.InBounce));
+        public Tween Shake(float duration, float delay)
+        {
+            Sequence mySequence = DOTween.Sequence().SetDelay(delay);
 
-       return mySequence.Play();
+            mySequence.Append(Target.DOMoveX(_originalPosition.x - 0.1f, duration).SetEase(Ease.InBounce));
+            mySequence.Append(Target.DOMoveX(_originalPosition.x + 0.1f, duration).SetEase(Ease.InBounce));
+            mySequence.Append(Target.DOMoveX(_originalPosition.x - 0.1f, duration).SetEase(Ease.InBounce));
+            mySequence.Append(Target.DOMoveX(_originalPosition.x, duration).SetEase(Ease.InBounce));
+
+            return mySequence.Play();
+        }
     }
 }
-

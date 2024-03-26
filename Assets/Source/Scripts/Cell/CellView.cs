@@ -1,33 +1,38 @@
+using Level;
 using UnityEngine;
 using VContainer;
 
-public class CellView : MonoBehaviour
+namespace Cells
 {
-    [SerializeField] private CellPresenter _cellPresenter;
-
-    private LevelsSwitcher _levelsSwitcher;
-    private bool _canClicking = true;
-
-    [Inject]
-    public void Construct(LevelsSwitcher levelsSwitcher)
+    public class CellView : MonoBehaviour
     {
-        _levelsSwitcher = levelsSwitcher;
-        _levelsSwitcher.LevelsEnded += DisableClicking;
-    }
+        [SerializeField] private CellPresenter _cellPresenter;
 
-    private void OnDisable()
-    {
-        _levelsSwitcher.LevelsEnded -= DisableClicking;
-    }
+        private LevelsSwitcher _levelsSwitcher;
+        private bool _canClicking = true;
 
-    private void OnMouseDown()
-    {
-        if (_canClicking)
-            _cellPresenter.OnCellClick();
-    }
+        [Inject]
+        public void Construct(LevelsSwitcher levelsSwitcher)
+        {
+            _levelsSwitcher = levelsSwitcher;
+            _levelsSwitcher.LevelsEnded += DisableClicking;
+        }
 
-    private void DisableClicking()
-    {
-        _canClicking = false;
+        private void OnDisable()
+        {
+            _levelsSwitcher.LevelsEnded -= DisableClicking;
+        }
+
+        private void OnMouseDown()
+        {
+            if (_canClicking)
+                _cellPresenter.OnCellClick();
+        }
+
+        private void DisableClicking()
+        {
+            _canClicking = false;
+        }
     }
 }
+
