@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0821185505f028449a57386d916f49d8, type: 3}
+  m_Name: Types Settings
+  m_EditorClassIdentifier: 
+  _types:
+  - _identifier: Letters
+    _levelCells:
+    - <Identifier>k__BackingField: A
+      <Sprite>k__BackingField: {fileID: 4963718625464178563, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: B
+      <Sprite>k__BackingField: {fileID: 7783457984840754399, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: C
+      <Sprite>k__BackingField: {fileID: 3234300448368640894, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: D
+      <Sprite>k__BackingField: {fileID: 7911670913450602933, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: F
+      <Sprite>k__BackingField: {fileID: -6426668015567183463, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: G
+      <Sprite>k__BackingField: {fileID: 216406037199867053, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: J
+      <Sprite>k__BackingField: {fileID: -2756605603065543306, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: I
+      <Sprite>k__BackingField: {fileID: -3541686595128163680, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: E
+      <Sprite>k__BackingField: {fileID: 4652326554734856401, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: H
+      <Sprite>k__BackingField: {fileID: -8235857483100294123, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: K
+      <Sprite>k__BackingField: {fileID: -1127063002332224934, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: L
+      <Sprite>k__BackingField: {fileID: -5901097786099144959, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: M
+      <Sprite>k__BackingField: {fileID: 3295844289267200183, guid: 1db22bbee81238e4e8c265c2e7ff7856, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: R
+      <Sprite>k__BackingField: {fileID: -6342808464625005154, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: S
+      <Sprite>k__BackingField: {fileID: 8083504644574312765, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: U
+      <Sprite>k__BackingField: {fileID: 3270655726746431581, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: V
+      <Sprite>k__BackingField: {fileID: -2983290644488427326, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: O
+      <Sprite>k__BackingField: {fileID: 5433449995169814141, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: Q
+      <Sprite>k__BackingField: {fileID: -4447791616812998045, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: W
+      <Sprite>k__BackingField: {fileID: -9165466868132007793, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: T
+      <Sprite>k__BackingField: {fileID: -4461999128152558772, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: N
+      <Sprite>k__BackingField: {fileID: 7112752472869403061, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: P
+      <Sprite>k__BackingField: {fileID: -4252152113809563852, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: X
+      <Sprite>k__BackingField: {fileID: 4461586319009975920, guid: 1ae74560aab175643993051adf41ccf7, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: Y
+      <Sprite>k__BackingField: {fileID: -5001085640463096552, guid: 3ea036991de5a394d8c9e6d41087476a, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: Z
+      <Sprite>k__BackingField: {fileID: 3539555106843919260, guid: 3ea036991de5a394d8c9e6d41087476a, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+  - _identifier: Digits
+    _levelCells:
+    - <Identifier>k__BackingField: 1
+      <Sprite>k__BackingField: {fileID: 1422184923334757970, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: 2
+      <Sprite>k__BackingField: {fileID: 1808195818850983521, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: 3
+      <Sprite>k__BackingField: {fileID: -7900951133411543555, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: 4
+      <Sprite>k__BackingField: {fileID: 2267071060405275165, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: 5
+      <Sprite>k__BackingField: {fileID: -7398325283844340781, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: 6
+      <Sprite>k__BackingField: {fileID: -7015292045520539579, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
+    - <Identifier>k__BackingField: 7
+      <Sprite>k__BackingField: {fileID: -675344402919758444, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+    - <Identifier>k__BackingField: 8
+      <Sprite>k__BackingField: {fileID: 3547489320769246608, guid: 4dd67c5667783724ba275bb440e4e443, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+    - <Identifier>k__BackingField: 9
+      <Sprite>k__BackingField: {fileID: -1155199509967091035, guid: 053f260ac19376d45a852b021eff82b2, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 1}
+    - <Identifier>k__BackingField: 10
+      <Sprite>k__BackingField: {fileID: 4142021021139464533, guid: 5335da941d9ce354bbd383a5f1549394, type: 3}
+      <SpriteRotate>k__BackingField: {x: 0, y: 0, z: 0, w: 1}

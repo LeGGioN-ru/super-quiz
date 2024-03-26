@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Letters 1
+  m_Name: Letters
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -93,5 +93,5 @@ SpriteAtlas:
   - LC_letters_1_1
   - LC_letters_1_0
   m_RenderDataMap: {}
-  m_Tag: Letters 1
+  m_Tag: Letters
   m_IsVariant: 0
