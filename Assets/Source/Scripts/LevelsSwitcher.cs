@@ -18,6 +18,7 @@ public class LevelsSwitcher : IPostInitializable, IDisposable
     private readonly CoroutineStarter _coroutineStarter;
     private readonly LevelRestarter _levelRestarterPresenter;
 
+    private bool _levelSwitching = false;
     private int _currentLevelIndex = 0;
     private const float _nextLevelDelay = 2;
 
@@ -56,11 +57,17 @@ public class LevelsSwitcher : IPostInitializable, IDisposable
 
     private void EnableNextLevel(CellData data)
     {
+        if (_levelSwitching == true)
+            return;
+
+        _levelSwitching = true;
+
         _currentLevelIndex++;
 
         if (_currentLevelIndex >= _levelSettings.ListSettings.Count)
         {
             LevelsEnded?.Invoke();
+            _levelSwitching = false;
             return;
         }
 
@@ -69,6 +76,7 @@ public class LevelsSwitcher : IPostInitializable, IDisposable
             NewLevelGenerating?.Invoke();
             GenerateLevel();
             NewLevelStarted?.Invoke();
+            _levelSwitching = false;
         });
     }
 

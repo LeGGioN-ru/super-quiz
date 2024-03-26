@@ -7,7 +7,7 @@ public class TypeLevelGenerator
 
     public CellData Generate(CellPresenter[] cells, TypesLevelSettings.Settings type)
     {
-       return SetGetRandomTypes(cells, type);
+        return SetGetRandomTypes(cells, type);
     }
 
     private CellData SetGetRandomTypes(CellPresenter[] cells, TypesLevelSettings.Settings type)
@@ -43,10 +43,18 @@ public class TypeLevelGenerator
 
     private CellData GetRandomRightAnswer(TypesLevelSettings.Settings type)
     {
-        List<CellData> notUsed = type.LevelCells.Where(x => _usedIdentifiers.Contains(x.Identifier) == false).ToList();
+        if (GetNotUsedTypes(type).Count == 0)
+            _usedIdentifiers.Clear();
+
+        List<CellData> notUsed = GetNotUsedTypes(type);
 
         CellData rightAnswer = notUsed.RandomElement();
         _usedIdentifiers.Add(rightAnswer.Identifier);
         return rightAnswer;
+    }
+
+    private List<CellData> GetNotUsedTypes(TypesLevelSettings.Settings type)
+    {
+        return type.LevelCells.Where(x => _usedIdentifiers.Contains(x.Identifier) == false).ToList();
     }
 }
