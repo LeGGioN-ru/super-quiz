@@ -1,6 +1,7 @@
 using Animations;
 using Level;
 using UnityEngine;
+using Utility;
 using VContainer;
 
 namespace Cells
@@ -57,7 +58,7 @@ namespace Cells
                 _isParticlesSpawned = true;
             }
 
-            _rightAnswerAnimation.Play(.125f);
+            _rightAnswerAnimation.Play(AppConstants.BounceDuration);
         }
 
         private void OnWrongAnswer(CellData cellData)

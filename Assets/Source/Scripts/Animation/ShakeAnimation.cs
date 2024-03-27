@@ -26,7 +26,7 @@ namespace Animations
             mySequence.Append(Target.DOMoveX(_originalPosition.x - 0.1f, duration).SetEase(Ease.InBounce));
             mySequence.Append(Target.DOMoveX(_originalPosition.x, duration).SetEase(Ease.InBounce));
 
-            return mySequence.Play();
+            return mySequence;
         }
     }
 }

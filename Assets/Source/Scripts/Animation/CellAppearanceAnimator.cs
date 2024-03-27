@@ -1,6 +1,7 @@
 using Level;
 using Level.Generating;
 using System;
+using Utility;
 using VContainer.Unity;
 
 namespace Animations
@@ -9,8 +10,6 @@ namespace Animations
     {
         private readonly LevelGenerator _levelGenerator;
         private readonly LevelsSwitcher _levelsSwitcher;
-
-        private const float _appearanceDelay = 0.125f;
 
         public CellAppearanceAnimator(LevelGenerator levelGenerator, LevelsSwitcher levelsSwitcher)
         {
@@ -33,7 +32,7 @@ namespace Animations
             for (int i = 0; i < _levelGenerator.CellPresenters.Count; i++)
             {
                 BounceAnimation bounceAnimation = new BounceAnimation(_levelGenerator.CellPresenters[i].transform);
-                bounceAnimation.Play(i * _appearanceDelay);
+                bounceAnimation.Play(i * AppConstants.BounceDuration);
             }
         }
     }

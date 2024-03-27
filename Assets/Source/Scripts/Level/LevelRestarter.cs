@@ -27,7 +27,7 @@ namespace Level
             _coroutineStarter = coroutineStarter;
             _levelSwitcher = levelsSwitcher;
             _backgroundAnimation = new FadeAnimation(_background.transform);
-            _buttonAnimation = new BounceAnimation(_background.transform);
+            _buttonAnimation = new BounceAnimation(_buttonHandler.transform);
 
             _levelSwitcher.LevelsEnded += OnLevelsEnd;
             _buttonHandler.ButtonPressed += OnButtonPressed;
@@ -63,7 +63,7 @@ namespace Level
 
         private void Enable()
         {
-            _buttonAnimation.Play(0.125f);
+            _buttonAnimation.Play(AppConstants.BounceDuration);
             _backgroundAnimation.Play(1f, 0.5f, 0, 0);
             SwitchUI(true);
         }
